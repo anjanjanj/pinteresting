@@ -28,3 +28,5 @@ ian:accounts-ui-bootstrap-3
 iron:router
 accounts-twitter
 peppelg:bootstrap-3-modal
+sjors:meteor-masonry
+momentjs:moment

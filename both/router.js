@@ -14,3 +14,11 @@ Router.route('/', {
     };
   }
 });
+
+Router.route('/user/:username', function() {
+  this.render('listAllPins', {
+    data: function () {
+      pins: Pins.find({authorName: this.params.username})
+    }
+  });
+});

@@ -1,21 +1,14 @@
 <template name="listAllPins">
-  <h1>All Pins</h1>
-  {{#each pins}}
-  <p>
-    <div class="item well span4">
-      <img style="height: 200px" src="{{imageUrl}}">
+  <h1>Browse All Pins</h1>
+  <div class="grid">
+    <div class="grid-sizer"></div>
+    {{#each pins}}
+      {{> pin}}
+    {{else}}
       <p>
-        {{text}}<br>
-        {{createdAt}}<br>
-        {{authorName}}<br>
-        (delete button)
+        No pins added yet!
       </p>
-    </div>
-  </p>
-  {{else}}
-    <p>
-      No pins added yet!
-    </p>
-  {{/each}}
+    {{/each}}
+  </div>
 
 </template>

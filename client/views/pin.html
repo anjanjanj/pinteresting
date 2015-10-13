@@ -1,0 +1,13 @@
+<template name="pin">
+  <p>
+    <div class="grid-item">
+      <img src="{{imageUrl}}">
+      <p>
+        <strong>{{text}}</strong><br>
+        <small>{{timeAgo(createdAt)}}</small><br>
+        by {{authorName}}<br>
+        (like) | (delete)
+      </p>
+    </div>
+  </p>
+</template>

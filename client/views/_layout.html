@@ -1,5 +1,5 @@
 <head>
-  <title>pinteresting</title>
+  <title>Pinteresting!</title>
 </head>
 
 <body>
@@ -16,14 +16,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ pathFor 'listAllPins' }}">Pinteresting!</a>
+        <a class="navbar-brand" href="{{ pathFor 'listAllPins' }}"><i class="fa fa-thumb-tack"></i> Pinteresting!</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           {{#if currentUser}}
+            <!-- @TODO: add navbar class "active" for current route -->
             <li><a href="#" id="add" style="background-color: darkgreen">Add Pin!</a></li>
-            <li class="active"><a href="{{ pathFor 'listAllPins' }}">All Pins</a></li>
-            <li><a href="#">My Pins</a></li>
+            <li><a href="{{ pathFor 'listAllPins' }}">All Pins</a></li>
+            <li><a href="{{ pathFor 'listUserPins' username=currentUser.username}}">My Pins</a></li>
           {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">

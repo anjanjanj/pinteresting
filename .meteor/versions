@@ -61,6 +61,7 @@ minifiers@1.1.7
 minimongo@1.0.10
 mobile-experience@1.0.1
 mobile-status-bar@1.0.6
+momentjs:moment@2.10.6
 mongo@1.1.2
 mongo-id@1.0.1
 npm-bcrypt@0.7.8_2
@@ -81,6 +82,7 @@ routepolicy@1.0.6
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
+sjors:meteor-masonry@0.0.1
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 srp@1.0.4
