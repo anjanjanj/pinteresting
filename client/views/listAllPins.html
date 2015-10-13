@@ -1,5 +1,5 @@
 <template name="listAllPins">
-  <h1>Browse All Pins</h1>
+  <h1>Browse {{#if username}} {{username}}'s {{/if}}Pins</h1>
   <div class="grid">
     <div class="grid-sizer"></div>
     {{#each pins}}

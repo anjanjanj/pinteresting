@@ -3,3 +3,5 @@ Template.pin.helpers({
     return moment(date).fromNow();
   }
 });
+
+// @TODO: add canDelete helper and delete link

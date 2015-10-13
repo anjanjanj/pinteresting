@@ -23,8 +23,8 @@
           {{#if currentUser}}
             <!-- @TODO: add navbar class "active" for current route -->
             <li><a href="#" id="add" style="background-color: darkgreen">Add Pin!</a></li>
-            <li><a href="{{ pathFor 'listAllPins' }}">All Pins</a></li>
-            <li><a href="{{ pathFor 'listUserPins' username=currentUser.username}}">My Pins</a></li>
+            <li><a href="{{ pathFor 'listAllPins' username='' }}">All Pins</a></li>
+            <li><a href="{{ pathFor 'listAllPins' username=currentUser.username }}">My Pins</a></li>
           {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">

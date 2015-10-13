@@ -1,3 +1,4 @@
+<!-- @TODO: sort out pin design -->
 <template name="pin">
   <p>
     <div class="grid-item">
@@ -5,8 +6,9 @@
       <p>
         <strong>{{text}}</strong><br>
         <small>{{timeAgo(createdAt)}}</small><br>
-        by {{authorName}}<br>
-        (like) | (delete)
+        by <a href="{{ pathFor 'listAllPins' username=authorName}}">{{authorName}}</a><br>
+        (like)<br>
+        (delete)
       </p>
     </div>
   </p>

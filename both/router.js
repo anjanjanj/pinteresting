@@ -2,23 +2,25 @@ Router.configure({
   layoutTemplate: 'layout'
 });
 
-Router.route('/', {
+Router.route('/:username?', {
   name: 'listAllPins',
   waitOn: function() {
     //@TODO: add subscriptions/publications
     //return Meteor.subscribe('pins');
   },
   data: function() {
-    return {
-      pins: Pins.find()
-    };
-  }
-});
-
-Router.route('/user/:username', function() {
-  this.render('listAllPins', {
-    data: function () {
-      pins: Pins.find({authorName: this.params.username})
+    //@TODO: is there a shorter way to do this? e.g. this.params.username || $anything
+    if (this.params.username) {
+      return {
+        pins: Pins.find({
+          authorName: this.params.username
+        }),
+        username: this.params.username
+      };
+    } else {
+      return {
+        pins: Pins.find({})
+      };
     }
-  });
+  }
 });
