@@ -1,13 +1,14 @@
 <template name="listAllPins">
   <h1>All Pins</h1>
-
   {{#each pins}}
   <p>
     <div class="item well span4">
       <img style="height: 200px" src="{{imageUrl}}">
       <p>
         {{text}}<br>
-        {{createdAt}}
+        {{createdAt}}<br>
+        {{authorName}}<br>
+        (delete button)
       </p>
     </div>
   </p>

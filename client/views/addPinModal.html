@@ -1,0 +1,34 @@
+<template name="addPinModal">
+  <div class="modal fade">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title">Add New Pin</h4>
+        </div>
+
+        <form id="addPinForm">
+
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="url">Image URL</label>
+              <input class="form-control" type="url" id="url" placeholder="The full URL to the image" required>
+            </div>
+            <div class="form-group">
+              <label for="text">Description</label>
+              <input class="form-control" type="text" id="text" placeholder="A short description or title for the image" required>
+            </div>
+          </div>
+
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="save">Add</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</template>

@@ -21,7 +21,7 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           {{#if currentUser}}
-            <li><a href="#" style="background-color: darkgreen">Add Pin!</a></li>
+            <li><a href="#" id="add" style="background-color: darkgreen">Add Pin!</a></li>
             <li class="active"><a href="{{ pathFor 'listAllPins' }}">All Pins</a></li>
             <li><a href="#">My Pins</a></li>
           {{/if}}
@@ -45,7 +45,6 @@
         {{/unless}}
 
         {{> yield}}
-
       </div>
     </div>
   </div>
