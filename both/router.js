@@ -13,15 +13,12 @@ Router.route('/:username?', {
     }
   },
   data: function() {
+    var d = { pins: Pins.find() };
+
     if (this.params.username) {
-      return {
-        username: this.params.username,
-        pins: Pins.find()
-      };
-    } else {
-      return {
-        pins: Pins.find()
-      }
+      d.username = this.params.username;
     }
+
+    return d;
   }
 });

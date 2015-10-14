@@ -9,3 +9,18 @@ Template.layout.events({
     Modal.show('addPinModal');
   }
 });
+
+Template.layout.helpers({
+  // nasty hack for quick navbar highlighting
+  activeIfTemplateIs: function(template) {
+    if (template === 'home') {
+      return Router.current().params.username ? '' : 'active';
+    }
+    else if (template === 'my') {
+      if (!Router.current().params.username || !Meteor.userId()) {
+        return '';
+      }
+      return Router.current().params.username === Meteor.user().username ? 'active' : '';
+    }
+  }
+});

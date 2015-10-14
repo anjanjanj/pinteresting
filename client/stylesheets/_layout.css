@@ -25,11 +25,10 @@
 /* ---- .grid-item ---- */
 
 .grid-sizer, .grid-item {
-  width: 24%;
+  width: 33.3%;
 }
 .grid-item {
   float: left;
-  border: 1px black solid;
 }
 .grid-item img {
   display: block;

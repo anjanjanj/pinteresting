@@ -21,10 +21,9 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           {{#if currentUser}}
-            <!-- @TODO: add navbar class "active" for current route -->
-            <li><a href="#" id="add" style="background-color: darkgreen">Add Pin!</a></li>
-            <li><a href="{{ pathFor 'listAllPins' username='' }}">All Pins</a></li>
-            <li><a href="{{ pathFor 'listAllPins' username=currentUser.username }}">My Pins</a></li>
+            <li><a href="#" id="add" style="background-color: #304FFE">Add Pin!</a></li>
+            <li class="{{ activeIfTemplateIs 'home' }}"><a href="{{ pathFor 'listAllPins' username='' }}">All Pins</a></li>
+            <li class="{{ activeIfTemplateIs 'my' }}"><a href="{{ pathFor 'listAllPins' username=currentUser.username }}">My Pins</a></li>
           {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
