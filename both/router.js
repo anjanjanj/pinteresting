@@ -5,8 +5,7 @@ Router.configure({
 Router.route('/:username?', {
   name: 'listAllPins',
   waitOn: function() {
-    //@TODO: add subscriptions/publications
-    //return Meteor.subscribe('pins');
+    //@TODO: clean this up
     if (this.params.username) {
       return Meteor.subscribe('pins', this.params.username);
     } else {
@@ -14,7 +13,6 @@ Router.route('/:username?', {
     }
   },
   data: function() {
-    //@TODO: is there a shorter way to do this? e.g. this.params.username || $anything
     if (this.params.username) {
       return {
         username: this.params.username,
