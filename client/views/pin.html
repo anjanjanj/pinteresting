@@ -2,15 +2,19 @@
 <template name="pin">
   <p>
     <div class="grid-item">
-      <img src="{{imageUrl}}">
+      <img src="{{imageUrl}}" id="img{{_id}}">
       <p>
         <strong>{{text}}</strong><br>
-        <small>{{timeAgo(createdAt)}}</small><br>
+        <small>{{timeAgo(createdAt)}} |
+          <i class="fa fa-thumbs-o-up"></i> {{likes.length}}</small><br>
         by <a href="{{ pathFor 'listAllPins' username=authorName}}">{{authorName}}</a><br>
-        (like)<br>
+
+        {{#if currentUser}}
+          <button class="likePin btn btn-primary" href="#">{{ likeText(likes) }}</button><br>
+        {{/if}}
 
         {{#if canDelete authorName}}
-          <a id="deletePin" href="#" class="small">Delete</a>
+          <a class="deletePin small" href="#">Delete</a>
         {{/if}}
 
       </p>
