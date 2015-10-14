@@ -6,6 +6,34 @@
   }
 }
 
+body {
+  background-color: black;
+}
+
+h1, p.lead {
+  color: white;
+}
+
+/* pin general layout: */
+
+.pin {
+	background: #FEFEFE;
+	border: 2px solid grey;
+  border-radius: 3px;
+}
+
+.pin img {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 5px;
+}
+
+.pin p {
+  padding: 0px 10px 10px 10px;
+	font-family: Arial, sans-serif;
+	color: #333;
+	margin: 0;
+}
+
 /* masonry */
 
 * {
