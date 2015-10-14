@@ -8,7 +8,11 @@
         <small>{{timeAgo(createdAt)}}</small><br>
         by <a href="{{ pathFor 'listAllPins' username=authorName}}">{{authorName}}</a><br>
         (like)<br>
-        (delete)
+
+        {{#if canDelete authorName}}
+          <a id="deletePin" href="#" class="small">Delete</a>
+        {{/if}}
+
       </p>
     </div>
   </p>
